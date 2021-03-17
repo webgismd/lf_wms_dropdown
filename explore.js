@@ -74,26 +74,8 @@ var startExploreApp = function() {
     });
 
 
-    // Remove layers from tilestream
-    $(document).ready(function() {
-        $("#removeTileLayer").click(function() {
-            var e = document.getElementById("tile-list");
-            var selectedLayer = e.options[e.selectedIndex].value;
-            // Check in the layer is in the map port
-            if (selectedLayer in layers) {
-                layerControl.removeLayer(layers[selectedLayer]);
-                map.removeLayer(layers[selectedLayer]);
-                delete layers[selectedLayer];
-            }
-            else {
-                showRemoveMsg();
-            }
-        });
-    });
-
     // Get layers names from geoserver
-    var geoserverLayer = "";
-    
+  
     var geoSel = document.getElementById("geoserver-list");
     
     function sortSelect(selElem) {
