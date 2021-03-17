@@ -1,0 +1,55 @@
+<!DOCTYPE html>   
+<html>
+<head>
+  <title>WMS Layers in Leaflet</title>
+</head>
+<body>
+      
+    <!-- ok so here we have the html... with the leaflet-js map and the dialog box divs-->
+    <!-- jquery -->
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+  <script src="http://unpkg.com/esri-leaflet@2.0.8"></script>
+
+    <!-- application -->
+    <script type="text/javascript" src="explore.js"></script>
+
+      <form>
+        <br>
+        Public DataBC Layers:
+        <br>
+        <select id="geoserver-list"></select>
+        <br><br>
+        <input type="button" id="addGeoLayer" value="Add Layer">
+        <input type="button" id="removeGeoLayer" value="Remove Layer">
+      </form>
+    </div> 
+    <div id="map" style="width: 100%;"></div> 
+    <div id="dialog-layers" title="Layer Options">
+    <div id="layer-selection">
+        <input id="layer-selection" type="button" value="Layers"/>
+    </div>
+
+    <div id="warning-duplicate" title="Woops!" class="ui-helper-hidden">
+        <p>This layer has already been added to the map</p>
+    </div> 
+
+    <div id="warning-no-layer" title="Woops!" class="ui-helper-hidden">
+        <p>This layer in not loaded in the map</p>
+    </div> 
+
+      
+</body>
+</html>
