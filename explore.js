@@ -22,7 +22,7 @@ var startExploreApp = function() {
     maxZoom: 15
     }).addTo(map);
 
-    layerControl = L.control.layers( {collapsed: false}).addTo(map);
+    layerControl = L.control.layers(layers, {collapsed: false}).addTo(map);
 
     // Resize the main and map div
     var mapFit = function() {
