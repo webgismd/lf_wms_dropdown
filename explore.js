@@ -6,7 +6,6 @@
 var MAX_ZOOM_LEVEL = 16;
 var layerControl;
 var layers;
-var geolayer;
 var wmsbase = "https://openmaps.gov.bc.ca/geo/pub/wms";
 
 var startExploreApp = function() {
