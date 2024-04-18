@@ -23,7 +23,6 @@ var startExploreApp = function() {
     }).addTo(map);
 
     layerControl = L.control.layers().addTo(map);
-
     // Resize the main and map div
     var mapFit = function() {
        $("#main").css("height", $(window).height() + "px");
