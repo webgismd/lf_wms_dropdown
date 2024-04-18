@@ -21,7 +21,7 @@ var startExploreApp = function() {
     maxZoom: 15
     }).addTo(map);
 
-    layerControl = L.control.layers();
+    layerControl = L.control.layers().addTo(map);
 
     // Resize the main and map div
     var mapFit = function() {
