@@ -13,6 +13,7 @@ var startExploreApp = function() {
     
     // define map and starting location
     var map = L.map("map").setView([55, -123.3], 5);
+
     
     // defined Base layers 
     L.esri.tiledMapLayer({
@@ -134,6 +135,7 @@ var startExploreApp = function() {
                     transparent: true
                 });
                 layerControl.addOverlay(geoLayer, selectedLayer);
+                layerControl = L.control.layers(geolayer).addTo(map);
                 map.addLayer(geoLayer);
                 // Keep track of layers that have been added
                 layers[selectedLayer] =  geoLayer;
