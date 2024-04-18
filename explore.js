@@ -135,10 +135,11 @@ var startExploreApp = function() {
                     transparent: true
                 });
                 layerControl.addOverlay(geoLayer, selectedLayer);
-                layerControl = L.control.layers(geolayer,  { collapsed: false }).addTo(map);
+                
                 map.addLayer(geoLayer);
                 // Keep track of layers that have been added
                 layers[selectedLayer] =  geoLayer;
+                layerControl = L.control.layers(layers,  { collapsed: false }).addTo(map);
             }
          });
      });
